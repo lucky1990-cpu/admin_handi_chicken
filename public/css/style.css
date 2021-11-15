@@ -1,0 +1,56 @@
+.FoodItemsMainten{
+    margin-top: 4%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    width: 90%;
+    margin-left: 4%;
+}
+
+.HomePageLogin{
+    margin-top: 53%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    width: 90%;
+    margin-left: 4%;
+    background: #f9fafb;
+ 
+
+}
+#CardContainer{
+    padding: 18%;
+    margin-top: -19%;
+}
+
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#HeaderImg{
+    height: 50%;
+    padding: 3%;
+}
+.HomeBackGround{
+    background-image: url('/Img/home-Img1.jpg');
+    
+    background-position: bottom;
+    
+}
+
+.handiText{
+    text-align: center;
+    font-family: emoji;
+}
+
+  
+
+ 

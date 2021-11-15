@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <img id="BackButton" style="width: 11%;" src="img/back-icon-1.jpg">
+        <a class="navbar-brand ">Food Items Maintenance</a>
+       
+      </div>
+    </nav>
+
+    <div class="FoodItemsMainten">
+      <form
+        action="/FoodItemsUplaod"
+        enctype="multipart/form-data"
+        method="post"
+        target="_self">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" for="FoodName">Food Name</span>
+          <textarea
+            class="form-control"
+            autocomplete="off"
+            required
+            id="FoodName"
+            name="FoodName"
+            placeholder="please enter Food Items Name"
+          ></textarea>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" for="FoodAmount">Food Amount</span>
+          <input
+            type="text"
+            autocomplete="off"
+            placeholder="please enter amount"
+            id="FoodAmount"
+            name="FoodAmount"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+          <span
+            class="input-group-text"
+            id="EditFoodDescription"
+            for="FoodDescription"
+          >Food Description</span>
+          <textarea
+            class="form-control"
+            autocomplete="off"
+            required
+            id="FoodDescription"
+            name="FoodDescription"
+            placeholder="please enter food description"
+          ></textarea>
+        </div>
+        
+        <div class="input-group mb-3">
+          <input
+            type="file"
+            class="form-control"
+            name="uploaded_file"
+            id="inputGroupFile01"
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            id="newJoinerformSubmit"
+          >Submit
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <script
+      src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+     <script src="/js/newFoodItem.js"></script>
+  </body>
+</html>
