@@ -1,7 +1,9 @@
 const _id = localStorage.getItem("ID");
 console.log(_id)
 const DevUrl = 'http://localhost:3000';
+const ProdUrl = 'http://handi-chichen.herokuapp.com/';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
+const ProdURLGet = ProdUrl+'/EditFoodItemFetchData';
 const URLEditFood = DevUrl +'/UpdateFoodItem';
 const URLDeleteFood =  DevUrl + '/DeleteFoodItem';
 const myData = {
@@ -9,7 +11,7 @@ const myData = {
 }
 $.ajax({
     type: "GET",
-    url: URLGet,
+    url: ProdURLGet,
     data: myData,
     cache: false,
     success: function(data){
