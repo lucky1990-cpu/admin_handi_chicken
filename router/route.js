@@ -25,7 +25,7 @@ route.post('/FoodItemsUplaod', upload.single('uploaded_file'),(req,res)=>{
           
              const fileData = new fileUpload(finalImage)
              fileData.save().then(()=>{
-                  res.render('AllFoodItems')
+                  //res.render('AllFoodItems')
              }).catch((e)=>{
               console.log(e)
              })
