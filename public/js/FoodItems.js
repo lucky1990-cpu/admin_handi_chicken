@@ -1,7 +1,9 @@
 
 
 $(document).ready(function(){
-    $.get('http://localhost:3000/FoodItems',(result)=>{
+    const ProdUrl = 'http://handi-chichen.herokuapp.com/';
+    const DevUrl = 'http://localhost:3000/FoodItems';
+    $.get(ProdUrl,(result)=>{
         var maindiv = document.getElementById('CardContainer');
         if(result.length>0){
             result.forEach(element => {
