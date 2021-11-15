@@ -4,8 +4,8 @@ const DevUrl = 'http://localhost:3000';
 const ProdUrl = 'http://handi-chichen.herokuapp.com/';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const ProdURLGet = ProdUrl+'/EditFoodItemFetchData';
-const URLEditFood = DevUrl +'/UpdateFoodItem';
-const URLDeleteFood =  DevUrl + '/DeleteFoodItem';
+const URLEditFood = ProdUrl +'/UpdateFoodItem';
+const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
 const myData = {
     _id:_id
 }
