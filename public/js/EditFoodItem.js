@@ -9,7 +9,6 @@ const URLDeleteFood =  ProdUrl + '/DeleteFoodItem';
 const myData = {
     _id:_id
 }
-
 $.ajax({
     type: "GET",
     url: ProdURLGet,
