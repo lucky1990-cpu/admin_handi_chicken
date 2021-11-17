@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const PublicDirectoryPath = path.join(__dirname,'./public')
 app.set("view engine", "hbs");
@@ -9,6 +10,7 @@ app.use(express.json())
 require('./MongoDB/MongooseConnection')
 
 app.use('/',require('./router/route'));
+app.use(cors())
 
 // app.get('/',(req,res)=>{
 //     res.render('index')
