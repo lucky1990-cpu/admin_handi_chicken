@@ -35,6 +35,8 @@ route.get('/FoodItems',async(req,res)=>{
     try{
         const FoodItems = await fileUpload.find({})
         console.log(FoodItems)
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.json(FoodItems)
     }
    catch(e){
