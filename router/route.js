@@ -34,7 +34,7 @@ route.post('/FoodItemsUplaod', upload.single('uploaded_file'),(req,res)=>{
 route.get('/FoodItems',async(req,res)=>{
     try{
         const FoodItems = await fileUpload.find({})
-        console.log(FoodItems)
+      
         res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
@@ -64,6 +64,9 @@ route.get('/EditFoodItemFetchData',async(req,res)=>{
     console.log(req.query._id);
     try{
         const EditItem = await fileUpload.find({_id:req.query._id})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
        
         res.json(EditItem)
     }
