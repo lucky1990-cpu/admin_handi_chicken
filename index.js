@@ -8,9 +8,9 @@ app.set('views', path.join(__dirname, './views'));
 app.use(express.static(PublicDirectoryPath))
 app.use(express.json()) 
 require('./MongoDB/MongooseConnection')
-
-app.use('/',require('./router/route'));
 app.use(cors())
+app.use('/',require('./router/route'));
+
 
 // app.get('/',(req,res)=>{
 //     res.render('index')
