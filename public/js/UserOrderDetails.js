@@ -162,6 +162,8 @@ const updateStatus = (element)=>{
       dataType: "json",
      contentType: "application/json; charset=utf-8",
      data: StringifyStatus,
+     crossDomain: true,
+      headers: {  'Access-Control-Allow-Origin': '*'},
       success: function(data){
       console.log(data)
       getCalltoRetriveFood()
