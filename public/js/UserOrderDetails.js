@@ -159,11 +159,13 @@ const updateStatus = (element)=>{
     $.ajax({
       type: "POST",
       url: URLStatusDev,
-      dataType: "json",
-     contentType: "application/json; charset=utf-8",
-     data: StringifyStatus,
-     crossDomain: true,
-      headers: {  'Access-Control-Allow-Origin': '*'},
+      data: StringifyStatus,
+      cache: false,
+      async: true,
+      crossDomain: true,
+      headers: {  'Access-Control-Allow-Origin': '*',
+      'accept': 'application/json'
+      },
       success: function(data){
       console.log(data)
       getCalltoRetriveFood()
