@@ -9,7 +9,7 @@ document.querySelector('.loader').style.visibility='hidden';
 
 document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
   e.preventDefault();
-  window.location.href='/AllFoodItems' 
+  window.location.href='/' 
 })
 
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
@@ -21,6 +21,10 @@ document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
     e.preventDefault();
     getAllOrder()
   })
+
+  const MaintainFood = ()=>{
+    window.location.href='/AllFoodItems'   
+  }
 
   const getAllOrder = (result)=>{
     FoodListBinding(result)
