@@ -79,17 +79,15 @@
   }
   #orderDetailsDiv{
     font-family: emoji;
-    padding-right: 1%;
+    padding-right: 2%;
+    margin-left: -7%;
    
   }
 
   .QtyAmount{
     padding-right: 10%;
   }
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+ 
   
 
  
