@@ -156,8 +156,7 @@ const FoodListBinding = (data)=>{
 const updateStatus = (element)=>{
     const updatedStatus = {StatusFoodId:element._id,FoodStatus:element.Status}
     const StringifyStatus = JSON.stringify(updatedStatus)
-    $.ajax({
-      type: "POST",
+    $.post({
       url: URLStatusDev,
       data: StringifyStatus,
       cache: false,
