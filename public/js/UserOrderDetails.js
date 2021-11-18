@@ -156,15 +156,15 @@ const FoodListBinding = (data)=>{
 const updateStatus = (element)=>{
     const updatedStatus = {StatusFoodId:element._id,FoodStatus:element.Status}
     const StringifyStatus = JSON.stringify(updatedStatus)
-    $.post({
+    $.getJSON({
       url: URLStatusDev,
       data: StringifyStatus,
-      cache: false,
-      async: true,
-      crossDomain: true,
-      headers: {  'Access-Control-Allow-Origin': '*',
-      'accept': 'application/json'
-      },
+      // cache: false,
+      // async: true,
+      // crossDomain: true,
+      // headers: {  'Access-Control-Allow-Origin': '*',
+      // 'accept': 'application/json'
+      // },
       success: function(data){
       console.log(data)
       getCalltoRetriveFood()
