@@ -111,8 +111,6 @@ const FoodListBinding = (data)=>{
     StatusPendingDiv.appendChild(status)
     const pending = document.createElement('div');
    if(element.Status=='P'){
-     pending.className='badge bg-primary rounded-pill';
-     pending.innerHTML='pending'
     var PendingButton = document.createElement('button');
     PendingButton.type = 'button';
     PendingButton.innerHTML = 'P';
