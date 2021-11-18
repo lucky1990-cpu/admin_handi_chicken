@@ -110,7 +110,7 @@ const FoodListBinding = (data)=>{
     status.innerHTML='Status'
     StatusPendingDiv.appendChild(status)
     const pending = document.createElement('div');
-   if(element.Status=='p'){
+   if(element.Status=='P'){
     var PendingButton = document.createElement('button');
     PendingButton.type = 'button';
     PendingButton.innerHTML = 'Pending';
