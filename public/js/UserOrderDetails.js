@@ -154,6 +154,7 @@ const FoodListBinding = (data)=>{
 }
 
 const updateStatus = (element)=>{
+  document.querySelector('.loader').style.visibility='visible';
     const updatedStatus = {StatusFoodId:element._id,FoodStatus:element.Status}
     const StringifyStatus = JSON.stringify(updatedStatus)
     $.ajax({
@@ -169,6 +170,7 @@ const updateStatus = (element)=>{
       // 'accept': 'application/json'
       // },
       success: function(data){
+        document.querySelector('.loader').style.visibility='hidden';
       console.log(data)
       getCalltoRetriveFood()
       },
