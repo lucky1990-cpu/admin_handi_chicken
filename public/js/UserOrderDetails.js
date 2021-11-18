@@ -157,6 +157,7 @@ const updateStatus = (element)=>{
     const updatedStatus = {StatusFoodId:element._id,FoodStatus:element.Status}
     const StringifyStatus = JSON.stringify(updatedStatus)
     $.ajax({
+      type: "POST",
       url: URLStatusDev,
       data: StringifyStatus,
       contentType: "application/json",
