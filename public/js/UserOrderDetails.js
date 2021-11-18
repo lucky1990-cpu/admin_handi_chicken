@@ -111,9 +111,11 @@ const FoodListBinding = (data)=>{
     StatusPendingDiv.appendChild(status)
     const pending = document.createElement('div');
    if(element.Status=='P'){
+     pending.className='badge bg-primary rounded-pill';
+     pending.innerHTML='pending'
     var PendingButton = document.createElement('button');
     PendingButton.type = 'button';
-    PendingButton.innerHTML = 'Pending';
+    PendingButton.innerHTML = 'P';
     PendingButton.className = 'btn btn-danger';
  
     PendingButton.onclick = function() {
@@ -125,7 +127,7 @@ const FoodListBinding = (data)=>{
    if(element.Status=='R'){
     var RecivedButton = document.createElement('button');
     RecivedButton.type = 'button';
-    RecivedButton.innerHTML = 'Recived';
+    RecivedButton.innerHTML = 'R';
     RecivedButton.className = 'btn btn-success';
  
     RecivedButton.onclick = function() {
@@ -146,8 +148,7 @@ const FoodListBinding = (data)=>{
     };
     pending.appendChild(CompletedButton)
    }
-    // pending.className='badge bg-primary rounded-pill';
-    // pending.innerHTML='pending'
+ 
     StatusPendingDiv.appendChild(pending)
     list.appendChild(StatusPendingDiv)
   });
