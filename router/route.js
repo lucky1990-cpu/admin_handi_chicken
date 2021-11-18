@@ -4,6 +4,7 @@ const { Router } = require('express')
 const control =  require('../controller/control')
 const upload = require('../Middleware/multer')
 const fileUpload  = require('../MongoDB/FoodItemsCreation')
+const userFood = require('../MongoDB/UserOrderedDetails')
 
 route.get('/',control.home)
 
@@ -46,6 +47,18 @@ route.get('/FoodItems',async(req,res)=>{
 
 })
 
+route.get('/UserOrderedFood',async(req,res)=>{
+    try{
+        const userFoodDetails = await userFood.find({})
+        res.json(userFoodDetails)
+        console.log(userFoodDetails)
+
+    }catch(e){
+        res.json(e)
+    }
+
+})
+
 route.get('/AllFoodItems',(req,res)=>{
 
     res.render('AllFoodItems')
@@ -57,6 +70,11 @@ route.get('/FoodPage',(req,res)=>{
 })
 route.get('/EditFoodItem',(req,res)=>{
     res.render('EditFoodItem')
+
+})
+
+route.get('/UserOrderDetails',(req,res)=>{
+    res.render('UsersOrderDetails')
 
 })
 
@@ -90,6 +108,25 @@ route.post('/DeleteFoodItem',async(req,res)=>{
          console.log(e)
        }
 
+
+})
+
+route.post('/OrderStatus',async(req,res)=>{
+    console.log(req.body)
+    const updatedStatusId =  {_id:req.body.StatusFoodId}
+    const updateStatusValue = {$set:{
+        Status: req.body.FoodStatus
+     
+    }}
+    try{
+       const UpdateStatus=  await userFood.findByIdAndUpdate(updatedStatusId, updateStatusValue)
+        res.status(200).json({data:'succssfullly updated'})
+       }
+       catch(e){
+         console.log(e)
+       }
+
+    
 
 })
 

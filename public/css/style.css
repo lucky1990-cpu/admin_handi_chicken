@@ -77,7 +77,19 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  #orderDetailsDiv{
+    font-family: emoji;
+    padding-right: 1%;
+   
+  }
 
+  .QtyAmount{
+    padding-right: 10%;
+  }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   
 
  

@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <img id="EditBackButton" style="width: 11%;" src="Img/back-icon.jpg">
+        <a class="navbar-brand ">Ordered Food</a>
+       
+      </div>
+    </nav>
+    <div>
+      <div class="alert alert-warning" role="alert">
+        Please continuously press refresh button to validate all food orders.
+      </div>
+    </div>
+      {{!-- <div class="container MobSearch">   
+  <div class="mb-3">
+    <label for="PhoneNumber" class="form-label">Mobile Number</label>
+    <input type="number" placeholder="Please Enter Mobile No." class="form-control" id="PhoneNumber" aria-describedby="phoneHelper">
+    <div id="PhoneHelper" class="form-text">Please Enter Mobile No which you placed Order.</div>
+  </div>
+  <button type="button"  class="btn btn-primary">Search</button>
+      
+    </div> --}}
+
+    {{!-- Search logic --}}
+     <div class="container MobSearch">
+       <div id="PhoneHelper" class="form-text">Please Enter Mobile No which you placed Order.</div>
+     <form class="d-flex">
+      <input id="PhoneNumber"  class="form-control me-2" type="number" placeholder="Please Enter Mobile No." aria-label="Search" aria-describedby="phoneHelper">
+    
+      <button class="btn btn-outline-success" id="searchByPhone" type="submit">Search</button>
+      <button class="btn btn-secondary" id="RefreshOrder" type="submit">Refresh</button>
+      
+      
+    </form>
+    
+    </div>
+
+
+
+   <div id ='orderDetailsDiv'></div>
+    {{!-- <ol class="list-group list-group-numbered" id='ListMainDiv'> --}}
+  {{!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Content for list item
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Content for list item
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      
+      <div class="fw-bold">Handi Chicken</div>
+        <div>
+          <h6>Lucky</h6>
+          <h6>9990716623</h6>
+          <h6>chouhan toola</h6>
+        </div>
+        
+    </div>
+      <div class='QtyAmount'>
+        <h5>Qty<span>:3</span></h5>
+        <span>23424</span>
+        
+      </div>
+    <div>
+    <div class="fw-bold">Status</div>
+    <span class="badge bg-primary rounded-pill">Pending</span>
+    </div>
+  </li> --}}
+{{!-- </ol> --}}
+   </div>
+<div class="loader"></div>
+
+    <script
+      src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+     <script src="/js/UserOrderDetails.js"></script>
+  </body>
+</html>
