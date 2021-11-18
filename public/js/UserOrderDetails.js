@@ -55,12 +55,12 @@ const SearchedPhoneCall = (mobNo)=>{
       });
 
 }
-const unOrderList = document.createElement('ul')
+
 const FoodListBinding = (data)=>{
   orderDetailsDiv.innerText='';
   
   data.forEach(element => {
-    
+    const unOrderList = document.createElement('ul')
     unOrderList.style='list-style-type:none';
     orderDetailsDiv.appendChild(unOrderList)
     const list = document.createElement('li');
