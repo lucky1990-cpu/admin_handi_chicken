@@ -1,5 +1,10 @@
 
 
+document.querySelector('#BackButton').addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location.href='/UserOrderDetails' 
+  })
+
 $(document).ready(function(){
     const ProdUrl = 'http://handi-chichen.herokuapp.com/FoodItems';
     const DevUrl = 'http://localhost:3000/FoodItems';
