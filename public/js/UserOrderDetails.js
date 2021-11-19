@@ -35,7 +35,9 @@ document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
     getCalltoRetriveFood();
   })
   const getCalltoRetriveFood = ()=>{
+    document.querySelector('.loader').style.visibility='visible';
     $.getJSON(URLAllFoodDev,(result)=>{
+      document.querySelector('.loader').style.visibility='hidden';
         getAllOrder(result)
     })
   }
@@ -52,7 +54,7 @@ const SearchedPhoneCall = (mobNo)=>{
        crossDomain: true,
         success: function(data){
           document.querySelector('.loader').style.visibility='hidden';
-          getAllOrder(data);
+          getAllOrder(JSON.parse(data));
            console.log(data)
         }
       });
