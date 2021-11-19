@@ -19,7 +19,7 @@ document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
 })
 document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
     e.preventDefault();
-    getAllOrder()
+    getCalltoRetriveFood()
   })
 
   const MaintainFood = ()=>{
@@ -44,12 +44,15 @@ const SearchedPhoneCall = (mobNo)=>{
    const phoneData = {mob:parseInt(mobNo)}
     $.ajax({
         type: "GET",
-        url: URLGet,
+        url: ProdURLGet,
         data: phoneData,
+        dataType: "text",
         cache: false,
+       async: true,
+       crossDomain: true,
         success: function(data){
           document.querySelector('.loader').style.visibility='hidden';
-          FoodListBinding(data);
+          getAllOrder(data);
            console.log(data)
         }
       });
