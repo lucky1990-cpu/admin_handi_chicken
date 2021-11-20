@@ -80,8 +80,11 @@
   }
   #orderDetailsDiv{
     font-family: emoji;
-    padding-right: 2%;
-    margin-left: -2%;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,-0.25rem);
+    margin-right: auto;
+    margin-left: -3%;
+   
    
   }
 
