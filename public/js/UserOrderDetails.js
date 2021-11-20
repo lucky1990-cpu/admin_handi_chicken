@@ -186,8 +186,9 @@ const FoodListBinding = (data)=>{
   
   
     const StatusPendingDiv = document.createElement('div');
+    StatusPendingDiv.className='Status'
     const status =  document.createElement('div');
-    status.className='Status'
+    
     status.className='fw-bold'
     status.innerHTML='Status'
     StatusPendingDiv.appendChild(status)
