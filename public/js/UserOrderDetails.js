@@ -4,6 +4,7 @@ const URLGet =  DevUrl+'/SearchedByPhoneNo';
 const URLAllFoodDev = ProdURL + '/UserOrderedFood';
 const URLStatusDev = ProdURL + '/OrderStatus';
 const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
+const StatusGet = ProdURL +'/SeachedByStatus';
 const orderDetailsDiv =  document.querySelector('#orderDetailsDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
@@ -16,14 +17,16 @@ const onTodayOrder= ()=>{
  
 }
 const onPendingOrder = ()=>{
-  
-  SearchedPhoneCall("P")
+  let data = "P"
+  SearchedByStatusCode(data)
 }
 const onRecivedOrder=()=>{
-  SearchedPhoneCall("R")
+  let data = "R"
+  SearchedByStatusCode(data)
 }
 const onCompletedOrder=()=>{
-  SearchedPhoneCall("C")
+  let data = "C"
+  SearchedByStatusCode(data)
 
 }
 
@@ -63,6 +66,26 @@ document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
       document.querySelector('.loader').style.visibility='hidden';
         getAllOrder(result)
     })
+  }
+
+  const SearchedByStatusCode = (Data)=>{
+    document.querySelector('.loader').style.visibility='visible';
+     const Statuscode = {Status:Data}
+      $.ajax({
+          type: "GET",
+          url: StatusGet,
+          data: Statuscode,
+          dataType: "text",
+          cache: false,
+         async: true,
+         crossDomain: true,
+          success: function(data){
+            document.querySelector('.loader').style.visibility='hidden';
+            getAllOrder(JSON.parse(data));
+             console.log(data)
+          }
+        });
+  
   }
 const SearchedPhoneCall = (mobNo)=>{
   document.querySelector('.loader').style.visibility='visible';
