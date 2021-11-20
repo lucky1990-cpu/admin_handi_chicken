@@ -33,7 +33,7 @@
 
     {{!-- Search logic --}}
      <div class="container MobSearch">
-       <div id="PhoneHelper" class="form-text">Please Enter Mobile No which you placed Order.</div>
+       <div id="PhoneHelper" class="form-text">Please Enter Mob to serach order details.</div>
      <form class="d-flex">
       <input id="PhoneNumber"  class="form-control me-2" type="number" placeholder="Please Enter Mobile No." aria-label="Search" aria-describedby="phoneHelper">
       <button class="btn btn-outline-success" id="searchByPhone" type="submit">Search</button>
@@ -41,7 +41,12 @@
     </form>
     </div>
 
-
+       <div class="container">
+     <button type="button" class="btn">Today Order</button>
+<button type="button" class="btn btn-primary">Pending</button>
+<button type="button" class="btn btn-secondary">Recived</button>
+<button type="button" class="btn btn-secondary">Completed</button>
+    </div>
 
    <div id ='orderDetailsDiv'></div>
     {{!-- <ol class="list-group list-group-numbered" id='ListMainDiv'> --}}
