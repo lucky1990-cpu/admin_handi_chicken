@@ -5,6 +5,7 @@ const URLAllFoodDev = ProdURL + '/UserOrderedFood';
 const URLStatusDev = ProdURL + '/OrderStatus';
 const ProdURLGet = ProdURL + '/SearchedByPhoneNo';
 const StatusGet = ProdURL +'/SeachedByStatus';
+const DateGet = ProdURL +'/SearchByCurrentDate'
 const orderDetailsDiv =  document.querySelector('#orderDetailsDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
@@ -14,7 +15,8 @@ document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
 })
 
 const onTodayOrder= ()=>{
- 
+  const todayDate = new Date()
+   SerchByDate(todayDate) 
 }
 const onPendingOrder = ()=>{
   let data = "P"
@@ -66,6 +68,27 @@ document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
       document.querySelector('.loader').style.visibility='hidden';
         getAllOrder(result)
     })
+  }
+
+
+  const SerchByDate =(data)=>{
+    document.querySelector('.loader').style.visibility='visible';
+    const DateTime = {DateTime:data}
+     $.ajax({
+         type: "GET",
+         url: DateGet,
+         data: DateTime,
+         dataType: "text",
+         cache: false,
+        async: true,
+        crossDomain: true,
+         success: function(data){
+           document.querySelector('.loader').style.visibility='hidden';
+           getAllOrder(JSON.parse(data));
+            console.log(data)
+         }
+       });
+
   }
 
   const SearchedByStatusCode = (Data)=>{
