@@ -42,10 +42,10 @@
     </div>
 
        <div class="container-fluid">
-     <button type="button" class="btn">Today</button>
-<button type="button" class="btn btn-primary">Pending</button>
-<button type="button" class="btn btn-secondary">Recived</button>
-<button type="button" class="btn btn-secondary">Completed</button>
+<button type="button" onclick="onTodayOrder()" class="btn btn-warning">Today</button>
+<button type="button" onclick="onPendingOrder()" class="btn btn-danger">Pending</button>
+<button type="button" onclick="onRecivedOrder()" class="btn btn-success">Recived</button>
+<button type="button" onclick="onCompletedOrder()" class="btn btn-secondary">Completed</button>
     </div>
 
    <div id ='orderDetailsDiv'></div>

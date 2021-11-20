@@ -12,6 +12,23 @@ document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
   window.location.href='/' 
 })
 
+const onTodayOrder= ()=>{
+ 
+}
+const onPendingOrder = ()=>{
+  
+  SearchedPhoneCall("P")
+}
+const onRecivedOrder=()=>{
+  SearchedPhoneCall("R")
+}
+const onCompletedOrder=()=>{
+  SearchedPhoneCall("C")
+
+}
+
+ 
+
 document.querySelector('#searchByPhone').addEventListener('click',(e)=>{
   e.preventDefault();
   const mobNo = document.querySelector('#PhoneNumber').value;
