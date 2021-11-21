@@ -1,5 +1,5 @@
-const ProdURL = 'http://user-handi-app.herokuapp.com';
-const DevUrl = 'http://localhost:3000';
+const ProdURL = 'https://user-handi-app.herokuapp.com';
+const DevUrl = 'https://localhost:3000';
 const URLGet =  DevUrl+'/SearchedByPhoneNo';
 const URLAllFoodDev = ProdURL + '/UserOrderedFood';
 const URLStatusDev = ProdURL + '/OrderStatus';

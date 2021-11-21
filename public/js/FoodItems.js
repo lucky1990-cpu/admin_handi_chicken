@@ -6,8 +6,8 @@ document.querySelector('#BackButton').addEventListener('click',(e)=>{
   })
 
 $(document).ready(function(){
-    const ProdUrl = 'http://handi-chichen.herokuapp.com/FoodItems';
-    const DevUrl = 'http://localhost:3000/FoodItems';
+    const ProdUrl = 'https://handi-chichen.herokuapp.com/FoodItems';
+    const DevUrl = 'https://localhost:3000/FoodItems';
     $.get(ProdUrl,(result)=>{
         document.querySelector('.loader').style.visibility='hidden';
         var maindiv = document.getElementById('CardContainer');

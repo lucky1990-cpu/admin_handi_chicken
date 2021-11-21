@@ -1,7 +1,7 @@
 const _id = localStorage.getItem("ID");
 console.log(_id)
-const DevUrl = 'http://localhost:3000';
-const ProdUrl = 'http://handi-chichen.herokuapp.com';
+const DevUrl = 'https://localhost:3000';
+const ProdUrl = 'https://handi-chichen.herokuapp.com';
 const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const ProdURLGet = ProdUrl+'/EditFoodItemFetchData';
 const URLEditFood = ProdUrl +'/UpdateFoodItem';
