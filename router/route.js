@@ -65,7 +65,7 @@ route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)
              ImageBase64:imgArray
          }
        
-          const fileData = new fileUBiryaniMahalFoodDetailspload(finalImage)
+          const fileData = new BiryaniMahalFoodDetails(finalImage)
           fileData.save().then(()=>{
              res.render('BiryaniMahalAddNewItems')
           }).catch((e)=>{
