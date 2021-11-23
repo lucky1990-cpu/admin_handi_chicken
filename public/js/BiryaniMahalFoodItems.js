@@ -6,7 +6,6 @@ const onAddNewFoodItems = ()=>{
 $.ajax({
     type: "GET",
     url: BiryaniFoodItemsURL,
-    data: myData,
     cache: false,
     success: function(data){
       document.querySelector('.loader').style.visibility='hidden';
