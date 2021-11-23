@@ -1,4 +1,4 @@
-const BiryaniFoodItemsURL= 'handi-chichen.herokuapp.com/BiryaniMahalFoodItems';
+const BiryaniFoodItemsURL= '/BiryaniMahalFoodItems';
 const onAddNewFoodItems = ()=>{
     window.location.href='/BiryaniMahalAddNewItems'
 
