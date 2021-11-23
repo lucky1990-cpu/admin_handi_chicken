@@ -26,7 +26,20 @@ route.get('/',control.home)
 // })
 
 route.get('/BiryaniMahalFoodItems',(req,res)=>{
-    res.render('BiryaniMahalFoodItems')
+
+    try{
+        const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
+      res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+           
+                res.json(BiryaniMahalFood)
+       
+            }
+           catch(e){
+        
+           }
+   
 
 })
 route.get('/BiryaniMahalUsersFood',(req,res)=>{
@@ -111,20 +124,7 @@ route.get('/FoodItems',async(req,res)=>{
 
 })
 
-route.get('/biryanimahalfoodItemsDisplay',async(req,res)=>{
-    try{
-        const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
-        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
-res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
-res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-   
-        res.json(BiryaniMahalFood)
-    }
-   catch(e){
 
-   }
-
-})
 
 route.get('/AdminHomePage',(req,res)=>{
     res.render('AdminHomePage')
