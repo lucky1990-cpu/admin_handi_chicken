@@ -1,6 +1,8 @@
 const ProdUrl = 'https://handi-chichen.herokuapp.com';
+
 //const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const ProdURLGet = ProdUrl+'/EditBriyaniMahalFoodItemFetchData';
+const UpdateFood = ProdUrl + '/UpdateBiryaniMahalFoodItem';
 const _id = localStorage.getItem("ID");
 const myData = {
     _id:_id
@@ -26,3 +28,57 @@ $.ajax({
     
 
   }
+
+  document.querySelector('#UpdateFood').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const updatedFood = {
+      ID:document.getElementById('EditBiryaniMahalFoodID').innerHTML,
+      FoodNmae :document.getElementById('EditBiryaniMahalFoodName').value,
+      Amount:  document.getElementById('EditNiryaniMahalFoodAmount').value,
+      foodDescription:document.getElementById('foodDescription').value
+  
+  }
+   UpdateFoodItem(updatedFood)
+   })
+  
+   document.querySelector('#DeleteFood').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const deleteId = document.getElementById('EditBiryaniMahalFoodID').innerHTML;
+    DeleteRecord({Id:deleteId})
+  
+   })
+   function DeleteRecord(deleteId){
+     const delData =  JSON.stringify(deleteId);
+    $.ajax({
+      type: "POST",
+      url: URLDeleteFood,
+      dataType: "json",
+     contentType: "application/json; charset=utf-8",
+     data: delData,
+      success: function(data){
+        alert(data.data)
+        window.location.href='/'
+      },
+      error:function(e){
+        console.log(e)
+      }
+    });
+   }
+  
+   function UpdateFoodItem(updatedFood){
+     const EditData = JSON.stringify(updatedFood)
+    $.ajax({
+      type: "POST",
+      url: UpdateFood,
+      dataType: "json",
+     contentType: "application/json; charset=utf-8",
+     data: EditData,
+      success: function(data){
+        alert(data.data)
+      },
+      error:function(e){
+        console.log(e)
+      }
+    });
+  
+   }

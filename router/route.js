@@ -241,6 +241,21 @@ route.post('/DeleteFoodItem',async(req,res)=>{
 
 
 })
+route.post('/DeleteBiryaniMahalFoodItem',async(req,res)=>{
+    const DeletBiryaniId = {_id:req.body.Id}
+   try{
+       const DeleteBiryaniMahalFoodItem = await BiryaniMahalFoodDetails.deleteOne(DeletBiryaniId)
+       
+       res.status(200).json({data:'succssfullly Deleted'})
+       
+       
+      }
+      catch(e){
+        console.log(e)
+      }
+
+
+})
 
 route.post('/OrderStatus',async(req,res)=>{
     console.log(req.body)
@@ -280,6 +295,28 @@ route.post('/UpdateFoodItem',async(req,res)=>{
      catch(e){
        console.log(e)
      }
+
+})
+
+route.post('/UpdateBiryaniMahalFoodItem',async(req,res)=>{
+    const updatedBiryaniMahalId =  {_id:req.body.ID}
+    const updateBiryaniMahalValue = {$set:{
+       foodItem: req.body.FoodNmae,
+       Amount:req.body.Amount,
+       foodDescription:req.body.foodDescription
+    }}
+   // console.log('update food items:'+ req.url)
+   // console.log(req.body)
+     
+   try{
+     const UpdateBiryaniMahalFoodItem = await BiryaniMahalFoodDetails.updateOne(updatedBiryaniMahalId,updateBiryaniMahalValue)
+     console.log(UpdateBiryaniMahalFoodItem)
+     res.status(200).json({data:'succssfullly updated'})
+     
+    }
+    catch(e){
+      console.log(e)
+    }
 
 })
 module.exports=  route
