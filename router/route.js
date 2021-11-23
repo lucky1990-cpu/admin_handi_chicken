@@ -28,8 +28,8 @@ route.get('/BiryaniMahalFoodItems',(req,res)=>{
     res.render('BiryaniMahalFoodItems')
 
 })
-route.get('/BiryaniMahalUserFood',(req,res)=>{
-    res.render('BiryaniMahalUserFood')
+route.get('/BiryaniMahalUsersFood',(req,res)=>{
+    res.render('BiryaniMahalUsersFood')
 
 })
 
