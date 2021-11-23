@@ -12,6 +12,16 @@ $.ajax({
     cache: false,
     success: function(data){
       document.querySelector('.loader').style.visibility='hidden';
-       EditFormBinding(data)
+      EditBiryaniMahalFormBinding(data)
     }
   });
+
+  function EditBiryaniMahalFormBinding(data){
+    document.getElementById('EditBiryaniMahalFoodID').innerHTML= data[0]._id;
+    document.getElementById('EditBiryaniMahalFoodName').value= data[0].foodItem;
+    document.getElementById('EditBiryaniMahalFoodAmount').value= data[0].Amount;
+    const ImgVal = 'data:'+data[0].contentType+';base64,'+data[0].ImageBase64+'';
+    document.getElementById('HeaderImg').src=ImgVal;
+    
+
+  }
