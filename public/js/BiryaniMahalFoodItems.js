@@ -31,9 +31,9 @@ const BiryaniFoodBinding = (data)=>{
         bold.innerHTML='RS:' +element.Amount
         per.appendChild(bold)
         div1.appendChild(per)
-        const foodButton = document.createElement('button')
-        foodButton.className='btn btn-primary';
-        foodButton.innerHTML='Order Now'
+        const foodButton = document.createElement('a')
+        foodButton.className='btn btn-primary EditBiryaniMahalFoodItem';
+        foodButton.innerHTML='Edit Food'
         div1.appendChild(foodButton)
         const span = document.createElement('span');
         span.className='idVisiblity'
@@ -48,9 +48,16 @@ const BiryaniFoodBinding = (data)=>{
         unOrderList.appendChild(listItem)
     });
     
-     
-     
-
-
+    
 
 }
+
+$('.EditBiryaniMahalFoodItem').click( ((e)=>{
+    const foodSibling = e.target.nextElementSibling;
+    const foodId = foodSibling.getInnerHTML();
+    localStorage.setItem("ID", foodId);
+    window.location.href='/BiryaniMahalEditItems';
+
+
+
+    }))
