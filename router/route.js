@@ -31,21 +31,22 @@ route.get('/BiryaniMahalFoodItems',(req,res)=>{
     res.render('BiryaniMahalFoodItems')
 })
 
-// route.get('/BiryaniMahalgetFood',(req,res)=>{
+route.get('/BiryaniMahalgetFood',(req,res)=>{
 
-//     try{
-//         const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
-//       res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
-//         res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
-//         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-//             res.json(BiryaniMahalFood)
+    // try{
+    //     const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
+    //   res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+    //     res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+    //     res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+    //         res.json(BiryaniMahalFood)
        
-//             }
-//            catch(e){
+    //         }
+    //        catch(e){
         
-//            }
+    //        }
     
-// })
+    res.send('hello')
+})
 route.get('/BiryaniMahalUsersFood',(req,res)=>{
     res.render('BiryaniMahalUsersFood')
 
