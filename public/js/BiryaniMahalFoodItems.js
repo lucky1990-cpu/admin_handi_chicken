@@ -15,7 +15,7 @@ $.get(BiryaniFoodItemsURL,(result)=>{
 
 
 
- const unOrderList = document.querySelector('BiryaniMahalFoodContainer');
+ const unOrderList = document.querySelector('#BiryaniMahalFoodContainer');
 const BiryaniFoodBinding = (data)=>{
     data.forEach(element => {
         const listItem = document.createElement('li');
