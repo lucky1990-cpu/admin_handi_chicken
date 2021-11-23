@@ -10,6 +10,17 @@ const onBiryaniMahalLogin = ()=>{
     validateLogin(user,Password);
 }
 
+const onHandiAdminLogin = ()=>{
+    let user = '';
+    let Password = document.querySelector('#HandiAdmin').value;
+    if(Password==''){
+        return;
+        
+    }
+
+    validateLogin(user,Password);
+}
+
 const validateLogin = (user,Password)=>{
     const myData = {
         user,
