@@ -1,3 +1,4 @@
+
 const BiryaniFoodItemsURL= '/BiryaniMahalgetFood';
 const onAddNewFoodItems = ()=>{
     window.location.href='/BiryaniMahalAddNewItems'
@@ -61,4 +62,16 @@ const BiryaniFoodBinding = (data)=>{
     
 
 }
+
+document.querySelector('#UpdateFood').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const updatedFood = {
+      ID:document.getElementById('EditFoodID').innerHTML,
+      FoodNmae :document.getElementById('EditFoodName').value,
+      Amount:  document.getElementById('EditFoodAmount').value,
+      foodDescription:document.getElementById('foodDescription').value
+  
+  }
+   UpdateFoodItem(updatedFood)
+   })
 

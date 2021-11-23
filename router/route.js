@@ -47,6 +47,27 @@ route.get('/BiryaniMahalgetFood',async(req,res)=>{
     
     
 })
+route.post('/BiryaniMahalFoodEdit',async(req,res)=>{
+    const updatedId =  {_id:req.body.ID}
+    const updateValue = {$set:{
+       foodItem: req.body.FoodNmae,
+       Amount:req.body.Amount,
+       foodDescription:req.body.foodDescription
+    }}
+   // console.log('update food items:'+ req.url)
+   // console.log(req.body)
+     
+   try{
+     const UpdateFoodItem = await BiryaniMahalFoodDetails.updateOne(updatedId,updateValue)
+     console.log(UpdateFoodItem)
+     res.status(200).json({data:'succssfullly updated'})
+     
+    }
+    catch(e){
+      console.log(e)
+    }
+
+})
 route.get('/BiryaniMahalUsersFood',(req,res)=>{
     res.render('BiryaniMahalUsersFood')
 
@@ -180,6 +201,23 @@ route.get('/EditFoodItemFetchData',async(req,res)=>{
         res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
        
         res.json(EditItem)
+    }
+   catch(e){
+       console.log(e)
+
+   }
+
+})
+
+route.get('/EditBriyaniMahalFoodItemFetchData',async(req,res)=>{
+    console.log(req.query._id);
+    try{
+        const EditBiryaniMahalItem = await BiryaniMahalFoodDetails.find({_id:req.query._id})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+        res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+       
+        res.json(EditBiryaniMahalItem)
     }
    catch(e){
        console.log(e)
