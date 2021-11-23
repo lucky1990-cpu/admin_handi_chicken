@@ -37,9 +37,13 @@ const validateLogin = (user,Password)=>{
         console.log(data)
         if(data.length<1){
          alert('Wrong Password!!!')
+         return;
         }
-        if(data[0].user='HandiMutton'){
+        if(data[0].user=='HandiMutton'){
             window.location.href='/UserOrderDetails' 
+        }
+        if(data[0].user=='BiryaniMahal'){
+            window.location.href='/BiryaniMahalUsersFood' 
         }
 
         }

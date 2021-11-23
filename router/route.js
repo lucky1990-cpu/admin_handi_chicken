@@ -28,6 +28,10 @@ route.get('/BiryaniMahalFoodItems',(req,res)=>{
     res.render('BiryaniMahalFoodItems')
 
 })
+route.get('/BiryaniMahalUserFood',(req,res)=>{
+    res.render('BiryaniMahalUserFood')
+
+})
 
 
 route.get('/AdminValidation',async(req,res)=>{
