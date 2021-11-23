@@ -111,7 +111,7 @@ route.get('/FoodItems',async(req,res)=>{
 
 })
 
-route.get('/biryanimahalfooddetails',async(req,res)=>{
+route.get('/biryanimahalfoodItemsDisplay',async(req,res)=>{
     try{
         const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
         res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
