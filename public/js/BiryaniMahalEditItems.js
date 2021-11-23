@@ -27,7 +27,6 @@ $.ajax({
     const ImgVal = 'data:'+data[0].contentType+';base64,'+data[0].ImageBase64+'';
     document.getElementById('HeaderImg').src=ImgVal;
     
-
   }
 
  
