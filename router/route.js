@@ -33,7 +33,7 @@ route.get('/BiryaniMahalUsersFood',(req,res)=>{
 
 })
 route.get('/BiryaniMahalAddNewItems',(req,res)=>{
-    res.render('BiryaniMahalUsersFood')
+    res.render('BiryaniMahalAddNewItems')
 })
 
 
