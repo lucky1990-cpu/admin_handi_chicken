@@ -55,6 +55,10 @@ route.get('/BiryaniMahalAddNewItems',(req,res)=>{
     res.render('BiryaniMahalAddNewItems')
 })
 
+route.get('/BiryaniMahalEditItems',(req,res)=>{
+    res.render('BiryaniMahalEditItems')
+})
+
 
 route.get('/AdminValidation',async(req,res)=>{
     try{
