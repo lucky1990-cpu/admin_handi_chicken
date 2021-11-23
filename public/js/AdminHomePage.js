@@ -1,7 +1,7 @@
 const AdminURL = 'https://handi-chichen.herokuapp.com/AdminValidation'
 const onBiryaniMahalLogin = ()=>{
-    const user = 'BiryaniMahal',
-    const Password = document.querySelector('#BiryaniAdmin').value;
+    let user = 'BiryaniMahal';
+    let Password = document.querySelector('#BiryaniAdmin').value;
     if(Password==''){
         return;
         
