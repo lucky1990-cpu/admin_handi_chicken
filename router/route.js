@@ -6,6 +6,7 @@ const upload = require('../Middleware/multer')
 const fileUpload  = require('../MongoDB/FoodItemsCreation')
 const userFood = require('../MongoDB/UserOrderedDetails')
 const AdminLogin = require('../MongoDB/AdminPassword')
+const BiryaniMahalFoodDetails = require('../MongoDB/BiryaniMahalFoodItems')
 
 route.get('/',control.home)
 
@@ -48,6 +49,28 @@ route.get('/AdminValidation',async(req,res)=>{
 
     }
 
+})
+
+route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)=>{
+     
+    let Img  =  fs.readFileSync(req.file.path)
+    
+    const imgArray = Img.toString('base64')
+
+    let finalImage ={
+             foodItem:req.body.FoodName,
+             Amount:req.body.FoodAmount,
+             foodDescription:req.body.foodDescription,
+             contentType: req.file.mimetype,
+             ImageBase64:imgArray
+         }
+       
+          const fileData = new fileUBiryaniMahalFoodDetailspload(finalImage)
+          fileData.save().then(()=>{
+             res.render('BiryaniMahalAddNewItems')
+          }).catch((e)=>{
+           console.log(e)
+          })
 })
 
 
