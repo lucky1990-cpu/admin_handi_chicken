@@ -47,17 +47,18 @@ const BiryaniFoodBinding = (data)=>{
         listItem.appendChild(foodImg)
         unOrderList.appendChild(listItem)
     });
+
+    $('.EditBiryaniMahalFoodItem').click( ((e)=>{
+        const foodSibling = e.target.nextElementSibling;
+        const foodId = foodSibling.getInnerHTML();
+        localStorage.setItem("ID", foodId);
+        window.location.href='/BiryaniMahalEditItems';
+    
+    
+    
+        }))
     
     
 
 }
 
-$('.EditBiryaniMahalFoodItem').click( ((e)=>{
-    const foodSibling = e.target.nextElementSibling;
-    const foodId = foodSibling.getInnerHTML();
-    localStorage.setItem("ID", foodId);
-    window.location.href='/BiryaniMahalEditItems';
-
-
-
-    }))
