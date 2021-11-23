@@ -47,8 +47,8 @@ route.get('/FoodItems',async(req,res)=>{
 
 })
 
-route.get('/UserOrderDetails',(req,res)=>{
-    res.render('UserOrderDetails')
+route.get('/AdminHomePage',(req,res)=>{
+    res.render('AdminHomePage')
 
 })
 
