@@ -35,7 +35,7 @@ $.ajax({
       ID:document.getElementById('EditBiryaniMahalFoodID').innerHTML,
       FoodNmae :document.getElementById('EditBiryaniMahalFoodName').value,
       Amount:  document.getElementById('EditBiryaniMahalFoodAmount').value,
-      foodDescription:document.getElementById('foodDescription').value
+      foodDescription:document.getElementById('foodBiryaniMahalDescription').value
   
   }
    UpdateFoodItem(updatedFood)
