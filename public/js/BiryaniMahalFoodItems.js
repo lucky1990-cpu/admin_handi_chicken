@@ -35,6 +35,9 @@ const BiryaniFoodBinding = (data)=>{
         foodButton.className='btn btn-primary';
         foodButton.innerHTML='Order Now'
         div1.appendChild(foodButton)
+        var span = document.createElement('span');
+        span.innerHTML=element._id;
+        div1.appendChild(span);
         listItem.appendChild(div1);
         const foodImg = document.createElement('img')
         foodImg.className='img-fluid rounded'
