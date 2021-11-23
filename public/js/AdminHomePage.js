@@ -38,6 +38,10 @@ const validateLogin = (user,Password)=>{
         if(data.length<1){
          alert('Wrong Password!!!')
         }
+        if(data[0].user='HandiMutton'){
+            window.location.href='/AllFoodItems' 
+        }
+
         }
       });
 
