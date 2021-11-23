@@ -3,6 +3,7 @@ const ProdUrl = 'https://handi-chichen.herokuapp.com';
 //const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const ProdURLGet = ProdUrl+'/EditBriyaniMahalFoodItemFetchData';
 const UpdateFood = ProdUrl + '/UpdateBiryaniMahalFoodItem';
+const URLDeleteFood = ProdUrl + '/DeleteBiryaniMahalFoodItem';
 const _id = localStorage.getItem("ID");
 const myData = {
     _id:_id
