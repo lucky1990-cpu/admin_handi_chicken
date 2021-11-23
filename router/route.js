@@ -24,6 +24,11 @@ route.get('/',control.home)
 //   console.log("Error", error);
 // })
 
+route.get('/BiryaniMahalFoodItems',(req,res)=>{
+    res.render('BiryaniMahalFoodItems')
+
+})
+
 
 route.get('/AdminValidation',async(req,res)=>{
     try{

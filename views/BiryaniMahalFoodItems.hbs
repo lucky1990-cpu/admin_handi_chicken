@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+      <div class="container-fluid">
+       <img id="BackButton" style="width: 11%;" src="Img/back-icon.jpg">
+        <a class="navbar-brand">Food Items</a>
+        
+      </div>
+    </nav>
+    <div>
+      <nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+  </div>
+    </div>
+
+    </div>
+    <div id="CardContainer"></div>
+    {{!-- <div class="container">
+     <div class="card" style="width: 18rem;">
+  <img  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">Chicken Handi</h3>
+    <h4>200 for one</h4>
+  </div>
+</div> --}}
+    </div>
+    <div class="loader"></div>
+
+ 
+<div class="fixed-bottom">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+      <div class="container-fluid justify-content-center">
+        <div>
+            <button class="btn btn-dark" onclick="onAddNewFoodItems()">Add new items</button>
+        </div>
+        
+      </div>
+    </nav>
+   
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/BiryaniMahalFoodItems.js"></script>
+  </body>
+</html>
