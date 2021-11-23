@@ -10,19 +10,19 @@ const AdminLogin = require('../MongoDB/AdminPassword')
 route.get('/',control.home)
 
 
-const Login = new AdminLogin( 
-    {
-        user:'HandiMutton',
-        Password:'HandiMutton@2021'
+// const Login = new AdminLogin( 
+//     {
+//         user:'HandiMutton',
+//         Password:'HandiMutton@2021'
         
 
-})
+// })
 
-Login.save().then(()=>{
-    console.log(Login)
-}).catch((error)=>{
-  console.log("Error", error);
-})
+// Login.save().then(()=>{
+//     console.log(Login)
+// }).catch((error)=>{
+//   console.log("Error", error);
+// })
 
 
 route.get('/AdminValidation',async(req,res)=>{
