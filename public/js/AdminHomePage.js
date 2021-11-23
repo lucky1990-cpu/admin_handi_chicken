@@ -39,7 +39,7 @@ const validateLogin = (user,Password)=>{
          alert('Wrong Password!!!')
         }
         if(data[0].user='HandiMutton'){
-            window.location.href='/AllFoodItems' 
+            window.location.href='/UserOrderDetails' 
         }
 
         }
