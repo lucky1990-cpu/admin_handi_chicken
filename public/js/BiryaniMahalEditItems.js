@@ -17,6 +17,7 @@ $.ajax({
   });
 
   function EditBiryaniMahalFormBinding(data){
+    
     document.getElementById('EditBiryaniMahalFoodID').innerHTML= data[0]._id;
     document.getElementById('EditBiryaniMahalFoodName').value= data[0].foodItem;
     document.getElementById('EditBiryaniMahalFoodAmount').value= data[0].Amount;
