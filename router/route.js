@@ -32,6 +32,9 @@ route.get('/BiryaniMahalUsersFood',(req,res)=>{
     res.render('BiryaniMahalUsersFood')
 
 })
+route.get('/BiryaniMahalAddNewItems',(req,res)=>{
+    res.render('BiryaniMahalUsersFood')
+})
 
 
 route.get('/AdminValidation',async(req,res)=>{
