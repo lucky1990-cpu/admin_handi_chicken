@@ -3,15 +3,12 @@ const onAddNewFoodItems = ()=>{
     window.location.href='/BiryaniMahalAddNewItems'
 
 }
-$.ajax({
-    type: "GET",
-    url: BiryaniFoodItemsURL,
-    cache: false,
-    success: function(data){
-      document.querySelector('.loader').style.visibility='hidden';
-      BiryaniFoodBinding(data)
-    }
-  });
+$.get(BiryaniFoodItemsURL,(result)=>{
+    BiryaniFoodBinding(result)
+    document.querySelector('.loader').style.visibility='hidden';
+})
+
+
 
 
 
