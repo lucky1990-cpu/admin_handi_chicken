@@ -1,4 +1,4 @@
-const BiryaniFoodItemsURL= '/BiryaniMahalFoodItems';
+const BiryaniFoodItemsURL= '/BiryaniMahalgetFood';
 const onAddNewFoodItems = ()=>{
     window.location.href='/BiryaniMahalAddNewItems'
 
