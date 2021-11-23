@@ -27,7 +27,7 @@ route.get('/',control.home)
 
 route.get('/AdminValidation',async(req,res)=>{
     try{
-     const AdminLoginDetails=   await AdminLogin.find( { $and: [ { user: { $eq: 'BiryaniMahal' } }, { Password: { $eq: 'BiryaniMahal@1990' } } ] } )
+     const AdminLoginDetails=   await AdminLogin.find( { $and: [ { user: { $eq: req.query.user } }, { Password: { $eq: req.query.Password } } ] } )
      console.log(AdminLoginDetails)
      res.json(AdminLoginDetails)
      
