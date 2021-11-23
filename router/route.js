@@ -111,6 +111,21 @@ route.get('/FoodItems',async(req,res)=>{
 
 })
 
+route.get('/biryanimahalfooddetails',async(req,res)=>{
+    try{
+        const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
+        res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+   
+        res.json(BiryaniMahalFood)
+    }
+   catch(e){
+
+   }
+
+})
+
 route.get('/AdminHomePage',(req,res)=>{
     res.render('AdminHomePage')
 
