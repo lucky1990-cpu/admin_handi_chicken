@@ -5,9 +5,38 @@ const control =  require('../controller/control')
 const upload = require('../Middleware/multer')
 const fileUpload  = require('../MongoDB/FoodItemsCreation')
 const userFood = require('../MongoDB/UserOrderedDetails')
+const AdminLogin = require('../MongoDB/AdminPassword')
 
 route.get('/',control.home)
 
+
+const Login = new AdminLogin( 
+    {
+        user:'BiryaniMahal',
+        Password:'BiryaniMahal@1990'
+        
+
+})
+
+Login.save().then(()=>{
+    console.log(Login)
+}).catch((error)=>{
+  console.log("Error", error);
+})
+
+
+route.get('/AdminValidation',async(req,res)=>{
+    try{
+     const AdminLoginDetails=   await AdminLogin.find( { $and: [ { user: { $eq: 'BiryaniMahal' } }, { Password: { $eq: 'BiryaniMahal@1990' } } ] } )
+     console.log(AdminLoginDetails)
+     res.json(AdminLoginDetails)
+     
+    }catch(e){
+        console.log(e)
+
+    }
+
+})
 
 
 route.post('/FoodItemsUplaod', upload.single('uploaded_file'),(req,res)=>{
