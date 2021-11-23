@@ -31,7 +31,7 @@ route.get('/BiryaniMahalFoodItems',(req,res)=>{
     res.render('BiryaniMahalFoodItems')
 })
 
-route.get('/BiryaniMahalgetFood',(req,res)=>{
+route.get('/BiryaniMahalgetFood',async(req,res)=>{
 
     try{
         const BiryaniMahalFood = await BiryaniMahalFoodDetails.find({})
