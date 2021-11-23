@@ -11,7 +11,7 @@ const onBiryaniMahalLogin = ()=>{
 }
 
 const onHandiAdminLogin = ()=>{
-    let user = '';
+    let user = 'HandiMutton';
     let Password = document.querySelector('#HandiAdmin').value;
     if(Password==''){
         return;
@@ -35,6 +35,9 @@ const validateLogin = (user,Password)=>{
         //   document.querySelector('.loader').style.visibility='hidden';
         //    EditFormBinding(data)
         console.log(data)
+        if(data.length<1){
+         alert('Wrong Password!!!')
+        }
         }
       });
 
