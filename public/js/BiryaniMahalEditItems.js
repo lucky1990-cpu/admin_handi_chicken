@@ -65,7 +65,7 @@ $.ajax({
 
   document.querySelector('#DeleteFood').addEventListener('click',(e)=>{
     e.preventDefault();
-    const deleteId = document.getElementById('EditFoodID').innerHTML;
+    const deleteId = document.getElementById('EditBiryaniMahalFoodID').innerHTML;
     DeleteRecord({Id:deleteId})
   
    })
