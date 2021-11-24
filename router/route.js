@@ -96,20 +96,20 @@ route.get('/AdminValidation',async(req,res)=>{
 
 route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)=>{
      
-    let Img  =  fs.readFileSync(req.file.path)
+    let BiryaniImg  =  fs.readFileSync(req.file.path)
     
-    let imgArray = Img.toString('base64')
+    let BiryaniimgArray = BiryaniImg.toString('base64')
 
-    let finalImage ={
+    let BiryanifinalImage ={
              foodItem:req.body.FoodName,
              Amount:req.body.FoodAmount,
              foodDescription:req.body.foodDescription,
              contentType: req.file.mimetype,
-             ImageBase64:imgArray
+             ImageBase64:BiryaniimgArray
          }
        
-          let fileData = new BiryaniMahalFoodDetails(finalImage)
-          fileData.save().then(()=>{
+          let BiryanifileData = new BiryaniMahalFoodDetails(BiryanifinalImage)
+          BiryanifileData.save().then(()=>{
              res.render('BiryaniMahalAddNewItems')
           }).catch((e)=>{
            console.log(e)
