@@ -37,10 +37,10 @@ $.ajax({
   document.querySelector('#UpdateFood').addEventListener('click',(e)=>{
     e.preventDefault();
     const updatedFood = {
-      ID:document.getElementById('EditFoodID').innerHTML,
-      FoodNmae :document.getElementById('EditFoodName').value,
-      Amount:  document.getElementById('EditFoodAmount').value,
-      foodDescription:document.getElementById('foodDescription').value
+      ID:document.getElementById('EditBiryaniMahalFoodID').innerHTML,
+      FoodNmae :document.getElementById('EditBiryaniMahalFoodName').value,
+      Amount:  document.getElementById('EditBiryaniMahalFoodAmount').value,
+      foodDescription:document.getElementById('FoodBiryaniMahalDescription').value
   
   }
    UpdateFoodItem(updatedFood)
