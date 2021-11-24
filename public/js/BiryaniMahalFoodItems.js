@@ -2,18 +2,18 @@
 const BiryaniFoodItemsURL= '/BiryaniMahalgetFood';
 const onAddNewFoodItems = ()=>{
     window.location.href='/BiryaniMahalAddNewItems'
-
 }
+document.querySelector('#BackButton').addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.location.href='/BiryaniMahalUsersFood' 
+  })
 $.get(BiryaniFoodItemsURL,(result)=>{
     BiryaniFoodBinding(result)
     console.log(result)
     document.querySelector('.loader').style.visibility='hidden';
 })
 
-document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
-  e.preventDefault();
-  window.location.href='/BiryaniMahalUsersFood' 
-})
+
 
  const unOrderList = document.querySelector('#BiryaniMahalFoodContainer');
 const BiryaniFoodBinding = (data)=>{
