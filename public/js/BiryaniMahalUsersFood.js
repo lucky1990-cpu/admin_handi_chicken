@@ -55,9 +55,7 @@ document.querySelector('#RefreshOrder').addEventListener('click',(e)=>{
     getCalltoRetriveFood()
   })
 
-  const MaintainFood = ()=>{
-    window.location.href='/AllFoodItems'   
-  }
+ 
 
   const getAllOrder = (result)=>{
     FoodListBinding(result)
