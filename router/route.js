@@ -94,7 +94,7 @@ route.get('/AdminValidation',async(req,res)=>{
 
 })
 
-route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)=>{
+route.post('/BiryaniMahalPostFoodItems', upload.single('BiryaniMahal_Img'),(req,res)=>{
      
     let BiryaniImg  =  fs.readFileSync(req.file.path)
     
