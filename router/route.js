@@ -98,7 +98,7 @@ route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)
      
     let Img  =  fs.readFileSync(req.file.path)
     
-    const imgArray = Img.toString('base64')
+    let imgArray = Img.toString('base64')
 
     let finalImage ={
              foodItem:req.body.FoodName,
@@ -108,7 +108,7 @@ route.post('/BiryaniMahalFoodItems', upload.single('BiryaniMahal_Img'),(req,res)
              ImageBase64:imgArray
          }
        
-          const fileData = new BiryaniMahalFoodDetails(finalImage)
+          let fileData = new BiryaniMahalFoodDetails(finalImage)
           fileData.save().then(()=>{
              res.render('BiryaniMahalAddNewItems')
           }).catch((e)=>{

@@ -2,7 +2,7 @@
 
 document.querySelector('#BackButton').addEventListener('click',(e)=>{
     e.preventDefault();
-    window.location.href='/UserOrderDetails' 
+    window.location.href='/ShopPage' 
   })
 
 $(document).ready(function(){
