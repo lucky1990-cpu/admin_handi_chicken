@@ -10,11 +10,10 @@ $.get(BiryaniFoodItemsURL,(result)=>{
     document.querySelector('.loader').style.visibility='hidden';
 })
 
-
-
-
-
-
+document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
+  e.preventDefault();
+  window.location.href='/BiryaniMahalUsersFood' 
+})
 
  const unOrderList = document.querySelector('#BiryaniMahalFoodContainer');
 const BiryaniFoodBinding = (data)=>{

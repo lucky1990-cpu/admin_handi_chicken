@@ -2,12 +2,17 @@ const ProdUrl = 'https://handi-chichen.herokuapp.com';
 
 //const URLGet =  DevUrl+'/EditFoodItemFetchData';
 const ProdURLGet = ProdUrl+'/EditBriyaniMahalFoodItemFetchData';
-const UpdateFood = ProdUrl + '/UpdateBiryaniMahalFoodItem';
+const URLEditFood = ProdUrl + '/UpdateBiryaniMahalFoodItem';
 const URLDeleteFood = ProdUrl + '/DeleteBiryaniMahalFoodItem';
 const _id = localStorage.getItem("ID");
 const myData = {
     _id:_id
 }
+
+document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
+  e.preventDefault();
+  window.location.href='/' 
+})
 $.ajax({
     type: "GET",
     url: ProdURLGet,
@@ -28,6 +33,59 @@ $.ajax({
     document.getElementById('HeaderImg').src=ImgVal;
     
   }
+
+  document.querySelector('#UpdateFood').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const updatedFood = {
+      ID:document.getElementById('EditFoodID').innerHTML,
+      FoodNmae :document.getElementById('EditFoodName').value,
+      Amount:  document.getElementById('EditFoodAmount').value,
+      foodDescription:document.getElementById('foodDescription').value
+  
+  }
+   UpdateFoodItem(updatedFood)
+   })
+   function UpdateFoodItem(updatedFood){
+    const EditData = JSON.stringify(updatedFood)
+   $.ajax({
+     type: "POST",
+     url: URLEditFood,
+     dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    data: EditData,
+     success: function(data){
+       alert(data.data)
+     },
+     error:function(e){
+       console.log(e)
+     }
+   });
+ 
+  }
+
+  document.querySelector('#DeleteFood').addEventListener('click',(e)=>{
+    e.preventDefault();
+    const deleteId = document.getElementById('EditFoodID').innerHTML;
+    DeleteRecord({Id:deleteId})
+  
+   })
+   function DeleteRecord(deleteId){
+     const delData =  JSON.stringify(deleteId);
+    $.ajax({
+      type: "POST",
+      url: URLDeleteFood,
+      dataType: "json",
+     contentType: "application/json; charset=utf-8",
+     data: delData,
+      success: function(data){
+        alert(data.data)
+        window.location.href='/'
+      },
+      error:function(e){
+        console.log(e)
+      }
+    });
+   }
 
  
   

@@ -14,10 +14,10 @@ const DateGet = ProdURL +'/BiryaniMahalSearchByCurrentDate'
 const orderDetailsDiv =  document.querySelector('#orderDetailsDiv')
 document.querySelector('.loader').style.visibility='hidden';
 
-document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
-  e.preventDefault();
-  window.location.href='/' 
-})
+// document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
+//   e.preventDefault();
+//   window.location.href='/' 
+// })
 
 const onTodayOrder= ()=>{
   const todayDate = new Date()
