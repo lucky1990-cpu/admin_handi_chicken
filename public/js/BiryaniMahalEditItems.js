@@ -11,7 +11,7 @@ const myData = {
 
 document.querySelector('#EditBackButton').addEventListener('click',(e)=>{
   e.preventDefault();
-  window.location.href='/' 
+  window.location.href='/BiryaniMahalFoodItems'
 })
 $.ajax({
     type: "GET",
@@ -55,6 +55,7 @@ $.ajax({
     data: EditData,
      success: function(data){
        alert(data.data)
+       window.location.href='/BiryaniMahalFoodItems'
      },
      error:function(e){
        console.log(e)
@@ -79,7 +80,7 @@ $.ajax({
      data: delData,
       success: function(data){
         alert(data.data)
-        window.location.href='/'
+        window.location.href='/BiryaniMahalFoodItems'
       },
       error:function(e){
         console.log(e)
