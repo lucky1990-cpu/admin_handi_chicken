@@ -169,9 +169,9 @@ const FoodListBinding = (data)=>{
     userAddress.innerHTML=element.Address
     userDetailDiv.appendChild(userAddress)
     listDiv.appendChild(userDetailDiv)
-    const trackingId = document.createElement('span')
-    trackingId.innerText=element._id
-    listDiv.appendChild(trackingId)
+    // const trackingId = document.createElement('span')
+    // trackingId.innerText=element._id
+    // listDiv.appendChild(trackingId)
   
     const QtyAmountDiv = document.createElement('div');
     QtyAmountDiv.className='QtyAmount';
