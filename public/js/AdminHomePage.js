@@ -3,9 +3,11 @@ const onBiryaniMahalLogin = ()=>{
     let user = 'BiryaniMahal';
     let Password = document.querySelector('#BiryaniAdmin').value;
     if(Password==''){
+        document.querySelector('#BiryaniAdmin').style.border='1px solid red'
         return;
         
     }
+    document.querySelector('#BiryaniAdmin').style.border='1px solid black'
 
     validateLogin(user,Password);
 }
@@ -14,11 +16,16 @@ const onHandiAdminLogin = ()=>{
     let user = 'HandiMutton';
     let Password = document.querySelector('#HandiAdmin').value;
     if(Password==''){
+        document.querySelector('#HandiAdmin').style.border='1px solid red'
         return;
         
     }
+    document.querySelector('#HandiAdmin').style.border='1px solid Black'
 
     validateLogin(user,Password);
+}
+const onFoodWorldLogin =()=>{
+    alert('Not in Service !!!!')
 }
 
 const validateLogin = (user,Password)=>{
